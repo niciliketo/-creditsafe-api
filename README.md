@@ -59,6 +59,6 @@ client.company_credit_report('GB-0-07332766')
 
 ### Credits
 
-Thanks to (GoCardless)[https://gocardless.com/] for the [creditsafe-ruby gem](https://github.com/gocardless/creditsafe-ruby) which much of this work is based upon.
+Thanks to [GoCardless](https://gocardless.com/) for the [creditsafe-ruby gem](https://github.com/gocardless/creditsafe-ruby) which much of this work is based upon.
 
 ---
