@@ -10,16 +10,13 @@ module Creditsafe
     class Client
       MANDATORY_PARAMS = %i[username password].freeze
       EXPECTED_PARAMS = %i[username password log_level environment].freeze
-      SANDBOX_BASE_URL = 'https://connect.sandbox.creditsafe.com/v1'.freeze
-      PRODUCTION_BASE_URL = 'https://connect.creditsafe.com/v1'.freeze
-      AUTH_PATH = '/authenticate'.freeze
-      COMPANY_SEARCH_PATH = '/companies'.freeze
-      HEADERS = { 'Content-Type' => 'application/json' }.freeze
+      SANDBOX_BASE_URL = 'https://connect.sandbox.creditsafe.com/v1'
+      PRODUCTION_BASE_URL = 'https://connect.creditsafe.com/v1'
+      AUTH_PATH = '/authenticate'
+      COMPANY_SEARCH_PATH = '/companies'
+      HEADERS = { 'Content-Type' => 'application/json' }
       def initialize(params)
-        puts params
-        check = check_params(params)
-
-        return check unless check.nil?
+        check_params(params)
 
         @username = params[:username]
         @password = params[:password]
@@ -29,7 +26,7 @@ module Creditsafe
 
       def connect
         url = build_url(AUTH_PATH)
-        params = {username: @username, password: @password }.to_json
+        params = { username: @username, password: @password }.to_json
         Creditsafe::Api.logger.debug("Making request for token to #{url}")
         response = Faraday.post(url, params, HEADERS)
         Creditsafe::Api.logger.debug('Response received')
@@ -55,10 +52,6 @@ module Creditsafe
         JSON.parse response.body
       end
 
-      def token
-        @token
-      end
-
       private
 
       def build_url(path, params = nil)
@@ -70,12 +63,9 @@ module Creditsafe
 
       def check_params(params)
         missing = MANDATORY_PARAMS.find_all{ |p| params[p].nil? }
-        unexpected =  params.reject{ |k| EXPECTED_PARAMS.include?(k) }
-        if missing.empty? && unexpected.empty?
-          return nil
-        else
-          return "Missing params: #{missing}. Unexpected params: #{unexpected}"
-        end
+        unexpected = params.reject{ |k| EXPECTED_PARAMS.include?(k) }
+        raise(IncorrectParams, "Missing params: #{missing}") unless missing.empty?
+        raise(IncorrectParams, "Unexpected params: #{unexpected}") unless unexpected.empty?
       end
 
       def auth_header
