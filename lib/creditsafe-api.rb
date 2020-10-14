@@ -2,23 +2,23 @@ require 'faraday'
 require 'json'
 require 'logger'
 module Creditsafe
-    module Api
-    ##
-    # TODO:
-    # 1. Make this a Gem
-    # 2. Add logging
-    # 3. Better error handling
-    # 4. Specs
-    # 5. Methods for other end points
-    # 6. Documentation
-    #
-    # HOW TO :
-    # Need username & password
-    #
-    # client = Creditsafe::Client.new(username: username, password: password)
-    # client.connect
-    # list = client.company_search({countries: 'GB', name: 'Market Dojo'})
-    # company = client.company_credit_report( "GB-0-07332766")
+  module Api
+  ##
+  # TODO:
+  # 1. Make this a Gem
+  # 2. Add logging
+  # 3. Better error handling
+  # 4. Specs
+  # 5. Methods for other end points
+  # 6. Documentation
+  #
+  # HOW TO :
+  # Need username & password
+  #
+  # client = Creditsafe::Client.new(username: username, password: password)
+  # client.connect
+  # list = client.company_search({countries: 'GB', name: 'Market Dojo'})
+  # company = client.company_credit_report( "GB-0-07332766")
 
     class << self
       attr_writer :logger
@@ -37,13 +37,13 @@ module Creditsafe
     end
 
     class Client
-      MANDATORY_PARAMS = %i(username password)
-      EXPECTED_PARAMS = %i(username password loglevel environment)
-      SANDBOX_BASE_URL = 'https://connect.sandbox.creditsafe.com/v1'
-      PRODUCTION_BASE_URL = 'https://connect.creditsafe.com/v1'
-      AUTH_PATH = '/authenticate'
-      COMPANY_SEARCH_PATH = '/companies'
-      HEADERS = {'Content-Type' => 'application/json'}
+      MANDATORY_PARAMS = %i[username password].freeze
+      EXPECTED_PARAMS = %i[username password log_level environment].freeze
+      SANDBOX_BASE_URL = 'https://connect.sandbox.creditsafe.com/v1'.freeze
+      PRODUCTION_BASE_URL = 'https://connect.creditsafe.com/v1'.freeze
+      AUTH_PATH = '/authenticate'.freeze
+      COMPANY_SEARCH_PATH = '/companies'.freeze
+      HEADERS = { 'Content-Type' => 'application/json' }.freeze
       def initialize(params)
         puts params
         check = check_params(params)
@@ -58,7 +58,7 @@ module Creditsafe
 
       def connect
         url = build_url(AUTH_PATH)
-        params = {username:  @username, password:  @password }.to_json
+        params = {username: @username, password: @password }.to_json
         Creditsafe::Api.logger.debug("Making request for token to #{url}")
         response = Faraday.post(url, params, HEADERS)
         Creditsafe::Api.logger.debug('Response received')
@@ -80,9 +80,8 @@ module Creditsafe
         check_connected
         url = build_url(COMPANY_SEARCH_PATH, connect_id)
         response = Faraday.get(url, {}, auth_header)
-        #logger.debug('Response received')
+        Creditsafe::Api.logger.debug("Response received: #{response}")
         JSON.parse response.body
-        #self.logger.debug("response: #{response_json}")
       end
 
       def token
@@ -97,8 +96,9 @@ module Creditsafe
         url += "/#{params}" unless params.nil?
         url
       end
+
       def check_params(params)
-        missing = MANDATORY_PARAMS.find_all{|p| params[p].nil?}
+        missing = MANDATORY_PARAMS.find_all{ |p| params[p].nil? }
         unexpected =  params.reject{ |k| EXPECTED_PARAMS.include?(k) }
         if missing.empty? && unexpected.empty?
           return nil
