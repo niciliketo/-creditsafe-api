@@ -1,0 +1,191 @@
+{
+  "correlationId": "2d054750-161f-11eb-816b-020efb2a7f15",
+  "totalSize": 83793,
+  "companies": [
+    {
+      "id": "GB-0-04040459",
+      "country": "GB",
+      "regNo": "04040459",
+      "safeNo": "UK03692165",
+      "name": "MARKETB LTD",
+      "address": {
+        "simpleValue": "11 KINNERTON STREET, LONDON, Greater London, SW1X8EA",
+        "city": "LONDON",
+        "postCode": "SW1X8EA"
+      },
+      "status": "NonActive",
+      "type": "Ltd",
+      "dateOfLatestChange": "2020-07-05T00:03:02.000Z",
+      "phoneNumbers": [],
+      "statusDescription": "Company is dissolved"
+    },
+    {
+      "id": "GB-0-SL009972",
+      "country": "GB",
+      "regNo": "SL009972",
+      "safeNo": "UK08110039",
+      "name": "MARKETIM LP",
+      "address": {
+        "simpleValue": "CENTRE OFFICE, 58A BROUGHTON STREET, EDINBURGH, EH1 3SA",
+        "street": "58A BROUGHTON STREET",
+        "city": "EDINBURGH",
+        "postCode": "EH1 3SA"
+      },
+      "status": "Active",
+      "type": "Ltd",
+      "dateOfLatestChange": "2019-08-20T08:46:42.000Z",
+      "statusDescription": "Company not required to file accounts"
+    },
+    {
+      "id": "GB-0-SC210837",
+      "country": "GB",
+      "regNo": "SC210837",
+      "safeNo": "UK07317534",
+      "name": "MARKET G31",
+      "address": {
+        "simpleValue": "334 DUKE STREET, DENNISTOWN, GLASGOW, City of Glasgow, G31 1QZ",
+        "street": "DENNISTOWN",
+        "city": "GLASGOW",
+        "postCode": "G31 1QZ"
+      },
+      "status": "NonActive",
+      "type": "Ltd",
+      "dateOfLatestAccounts": "2014-03-31T00:00:00.000000Z",
+      "dateOfLatestChange": "2020-07-05T00:03:02.000Z",
+      "phoneNumbers": [
+        "01415567276"
+      ],
+      "activityCode": "8042",
+      "statusDescription": "Converted / Closed"
+    },
+    {
+      "id": "GB-0-09007125",
+      "country": "GB",
+      "regNo": "09007125",
+      "safeNo": "UK09353687",
+      "name": "MARKETO LTD",
+      "address": {
+        "simpleValue": "145-157 ST JOHN STREET, LONDON, EC1V 4PW",
+        "street": "LONDON",
+        "postCode": "EC1V 4PW"
+      },
+      "status": "NonActive",
+      "type": "Ltd",
+      "dateOfLatestChange": "2015-12-03T10:31:19.000Z",
+      "statusDescription": "Company is dissolved"
+    },
+    {
+      "id": "GB-0-SC505490",
+      "country": "GB",
+      "regNo": "SC505490",
+      "safeNo": "UK13681016",
+      "name": "MARK ETL LTD",
+      "address": {
+        "simpleValue": "57 SINGERS PLACE, FALKIRK, BONNYBRIDGE, Stirling and Falkirk, FK4 1FD",
+        "street": "FALKIRK",
+        "city": "BONNYBRIDGE",
+        "postCode": "FK4 1FD"
+      },
+      "status": "NonActive",
+      "type": "Ltd",
+      "dateOfLatestChange": "2020-07-05T00:03:02.000Z",
+      "activityCode": "7260",
+      "statusDescription": "Company is dissolved"
+    },
+    {
+      "id": "GB-1-5671663",
+      "country": "GB",
+      "safeNo": "UK13456329",
+      "name": "MARKET CARS",
+      "address": {
+        "simpleValue": "141-143 WORCESTER ROAD, BROMSGROVE, WORCESTERSHIRE, B61 7DL",
+        "street": "WORCESTER ROAD",
+        "city": "BROMSGROVE",
+        "postCode": "B61 7DL"
+      },
+      "status": "Active",
+      "type": "NonLtd",
+      "dateOfLatestChange": "2020-01-28T06:27:11.000Z",
+      "phoneNumbers": [
+        "01527 837887"
+      ],
+      "statusDescription": "Active"
+    },
+    {
+      "id": "GB-1-5352684",
+      "country": "GB",
+      "safeNo": "UK17284100",
+      "name": "MARKETEST",
+      "address": {
+        "simpleValue": "UNITED HOUSE, LONDON, N7 9DP",
+        "street": "UNITED HOUSE",
+        "city": "LONDON",
+        "postCode": "N7 9DP"
+      },
+      "status": "Active",
+      "type": "NonLtd",
+      "dateOfLatestChange": "2019-11-26T06:52:03.000Z",
+      "phoneNumbers": [
+        "020 7687 1234"
+      ],
+      "statusDescription": "Active"
+    },
+    {
+      "id": "GB-1-1163816",
+      "country": "GB",
+      "safeNo": "UK10127302",
+      "name": "MARKET INN",
+      "address": {
+        "simpleValue": "18 WORTLEY ROAD, HIGH GREEN, SHEFFIELD, SOUTH YORKSHIRE, S35 4LU",
+        "street": "HIGH GREEN",
+        "city": "SHEFFIELD",
+        "postCode": "S35 4LU"
+      },
+      "status": "Active",
+      "type": "NonLtd",
+      "dateOfLatestChange": "2009-03-31T23:00:00.000Z",
+      "phoneNumbers": [
+        "0114 284 6963"
+      ],
+      "statusDescription": "Active"
+    },
+    {
+      "id": "GB-1-1163820",
+      "country": "GB",
+      "safeNo": "UK10127304",
+      "name": "MARKET INN",
+      "address": {
+        "simpleValue": "2 CASTLEHILL ROAD, AYR, AYRSHIRE, KA7 2HT",
+        "street": "CASTLEHILL ROAD",
+        "city": "AYR",
+        "postCode": "KA7 2HT"
+      },
+      "status": "Active",
+      "type": "NonLtd",
+      "dateOfLatestChange": "2020-07-14T05:10:32.000Z",
+      "phoneNumbers": [
+        "01292 280391"
+      ],
+      "statusDescription": "Active"
+    },
+    {
+      "id": "GB-1-1163723",
+      "country": "GB",
+      "safeNo": "UK10127255",
+      "name": "MARKET GATE",
+      "address": {
+        "simpleValue": "43 SANDY LANE, SKELMERSDALE, LANCASHIRE, WN8 8LA",
+        "street": "SANDY LANE",
+        "city": "SKELMERSDALE",
+        "postCode": "WN8 8LA"
+      },
+      "status": "Active",
+      "type": "NonLtd",
+      "dateOfLatestChange": "2009-03-31T23:00:00.000Z",
+      "phoneNumbers": [
+        "01695 51211"
+      ],
+      "statusDescription": "Active"
+    }
+  ]
+}

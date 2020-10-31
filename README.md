@@ -56,7 +56,18 @@ client.company_credit_report('GB-0-07332766')
     ...
    }
 ```
+# Dummy environment
 
+It is not always convenient to send real requests to either the production or sandbox environment.
+
+In this case you can pass `environment: :dummy` to the connect method.
+This will use the responses stored in the dummy_responses folder.
+
+# Tests
+Run the tests with...
+```ruby
+rake test
+```
 ### Credits
 
 Thanks to [GoCardless](https://gocardless.com/) for the [creditsafe-ruby gem](https://github.com/gocardless/creditsafe-ruby) which much of this work is based upon.

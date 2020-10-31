@@ -9,12 +9,12 @@ module Creditsafe
   # Inner namespace to Creditsafe::API
   module Api
     class << self
-      attr_writer :logger
-
       def logger
-        @logger ||= Logger.new($stdout).tap do |log|
-          log.progname = name
-        end
+        @@logger ||= defined?(Rails.logger) ? Rails.logger : Logger.new($stdout)
+      end
+
+      def logger=(logger)
+        @@logger = logger
       end
     end
   end

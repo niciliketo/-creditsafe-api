@@ -7,40 +7,15 @@ module Creditsafe
     ##
     # Client connects to the creditsafe api and provides methods
     # matching API calls.
-    class Client
+    class BaseClient
       include Creditsafe::Api::Utils
+      attr_accessor :token
       def initialize(params)
-        check_params(params)
-
         @username = params[:username]
         @password = params[:password]
         @loglevel = params[:loglevel] || Logger::WARN
 
         @environment = params[:environment] || :production
-        # Proxy either makes real calls or dummy calls...
-        if @environment == :dummy
-          @proxy = DummyClient.new(params)
-        else
-          @proxy = RealClient.new(params)
-        end
-      end
-
-      def connect
-        @proxy.connect
-        @token = @proxy.token
-        true
-      end
-
-      def connected?
-        @proxy.connected?
-      end
-
-      def company_search(params)
-        @proxy.company_search(params)
-      end
-
-      def company_credit_report(connect_id)
-        @proxy.company_credit_report(connect_id)
       end
 
       private
@@ -58,12 +33,6 @@ module Creditsafe
 
       def check_connected
         raise NotConnected if @token.nil?
-      end
-
-      # Stubbing responses is helpful for testing and also so we dont use up API credits
-      # While testing, developing etc.
-      def stub_responses
-        Creditsafe::Api::DummyResponse.new
       end
     end
   end

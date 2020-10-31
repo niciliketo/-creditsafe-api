@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://connect.creditsafe.com/v1/authenticate
+    body:
+      encoding: UTF-8
+      string: '{"username":"user","password":"pass"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Oct 2020 09:13:09 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1108'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "token": "XXXhbGciOiJSUzI1NiIsImtpZCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCIsInR5cCI6IkpXVCIsIng1dCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCJ9.eyJuYmYiOjE2MDQxMzU1ODksImV4cCI6MTYwNDEzOTE4OSwiaXNzIjoiaHR0cHM6Ly9teWxvZ2luLmNyZWRpdHNhZmUuY29tIiwiYXVkIjpbImh0dHBzOi8vbXlsb2dpbi5jcmVkaXRzYWZlLmNvbS9yZXNvdXJjZXMiLCJjb25uZWN0X2FwaSIsInVib19hcGlfZ2F0ZXdheSJdLCJjbGllbnRfaWQiOiJjb25uZWN0LmFwaS5jbGllbnQiLCJzdWIiOiIxMDE1MzkxNzEiLCJhdXRoX3RpbWUiOjE2MDQxMzU1ODksImlkcCI6ImxvY2FsIiwidXNlcm5hbWUiOiJiZW5oYXJ2ZXktMTMwNjM4Nzg1NCIsImVtYWlsIjoiYmVuLmhhcnZleUBtYXJrZXRkb2pvLmNvbSIsImN1c3RvbWVySWQiOiIxMDE3MDE0MDIiLCJjb3VudHJ5IjoiQzAiLCJ1c2VyUm9sZSI6IkN1c3RvbWVyU2VuaW9yVXNlciIsInNiX2NvdW50cnkiOiJHQiIsInNjb3BlIjpbImNvbm5lY3RfYXBpIiwidWJvX2FwaV9nYXRld2F5Il0sImFtciI6WyJwd2QiXX0.boGUYohf4eJPETKXNTELUw0pTfdxLUY6qc1b2qCX40SQRM2rnr39fkFr9atFMIVesBnr_HCYmEhQS0PEVFVqginAkrrmdO7WiL0ZYwqbQ4iBOq6PETieZa03eT_Ifir5Si3ZWeHtzZt7m2qeA2mt_grpT_-1u3dVpRsREFfTyLg8-9KugjnKw6HNFkji2-gzeSBaW6VP3xBw0eiOIUO0ewese_eGirle9RqLlK2KKjEoKSa3inMaSQiYTkOPwGi6F4_Yu9D0DtBEX05xgYZIwn5yfN_wiGoBzclLWT_gKBqaCpNVofI7ebSrwW7TR2DKT0x0f4PuEgbKWFZFgQFZVA"
+        }
+  recorded_at: Sat, 31 Oct 2020 09:13:09 GMT
+recorded_with: VCR 6.0.0

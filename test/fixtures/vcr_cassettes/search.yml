@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://connect.creditsafe.com/v1/authenticate
+    body:
+      encoding: UTF-8
+      string: '{"username":"user","password":"pass"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Oct 2020 09:14:54 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1108'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "token": "XXJhbGciOiJSUzI1NiIsImtpZCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCIsInR5cCI6IkpXVCIsIng1dCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCJ9.eyJuYmYiOjE2MDQxMzU2OTQsImV4cCI6MTYwNDEzOTI5NCwiaXNzIjoiaHR0cHM6Ly9teWxvZ2luLmNyZWRpdHNhZmUuY29tIiwiYXVkIjpbImh0dHBzOi8vbXlsb2dpbi5jcmVkaXRzYWZlLmNvbS9yZXNvdXJjZXMiLCJjb25uZWN0X2FwaSIsInVib19hcGlfZ2F0ZXdheSJdLCJjbGllbnRfaWQiOiJjb25uZWN0LmFwaS5jbGllbnQiLCJzdWIiOiIxMDE1MzkxNzEiLCJhdXRoX3RpbWUiOjE2MDQxMzU2OTQsImlkcCI6ImxvY2FsIiwidXNlcm5hbWUiOiJiZW5oYXJ2ZXktMTMwNjM4Nzg1NCIsImVtYWlsIjoiYmVuLmhhcnZleUBtYXJrZXRkb2pvLmNvbSIsImN1c3RvbWVySWQiOiIxMDE3MDE0MDIiLCJjb3VudHJ5IjoiQzAiLCJ1c2VyUm9sZSI6IkN1c3RvbWVyU2VuaW9yVXNlciIsInNiX2NvdW50cnkiOiJHQiIsInNjb3BlIjpbImNvbm5lY3RfYXBpIiwidWJvX2FwaV9nYXRld2F5Il0sImFtciI6WyJwd2QiXX0.FWxZ5n8fSMnh477icoZMPGONlYwvSXXWkGggtdWnIQvC_9Jv1NnALCtG99F1Wzf4mpmHC-pPInkDUE4cs-xyVvkc6krXftTtcQ8lEtlxL5lyvM-tm2F1MM8dbCcznaCUujpLFt4TeefWUnOtP2tNPZYcK3kSQOF6SH0LvlVBCG-ogu6AxY2GME7jyhNXMnLBGB-cMV76yQEFTfSyb-FV6Ekt4pqOB_PO4oK9p0sONe6Dr5Su9un764xGVyyTq9JXdfEgOTLs1_wCI3bWehpoIopwBq_rDSaOlyrgbVSKhK95xfXQ2REF_N4U_CLmxy-exam3OupFsBXwoSW_713cpA"
+        }
+  recorded_at: Sat, 31 Oct 2020 09:14:54 GMT
+- request:
+    method: get
+    uri: https://connect.creditsafe.com/v1/companies?countries=GB&name=market
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - XXJhbGciOiJSUzI1NiIsImtpZCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCIsInR5cCI6IkpXVCIsIng1dCI6ImNZOGpqZXByakZOZDdVS1FrQ08zcVVycDZMNCJ9.eyJuYmYiOjE2MDQxMzU2OTQsImV4cCI6MTYwNDEzOTI5NCwiaXNzIjoiaHR0cHM6Ly9teWxvZ2luLmNyZWRpdHNhZmUuY29tIiwiYXVkIjpbImh0dHBzOi8vbXlsb2dpbi5jcmVkaXRzYWZlLmNvbS9yZXNvdXJjZXMiLCJjb25uZWN0X2FwaSIsInVib19hcGlfZ2F0ZXdheSJdLCJjbGllbnRfaWQiOiJjb25uZWN0LmFwaS5jbGllbnQiLCJzdWIiOiIxMDE1MzkxNzEiLCJhdXRoX3RpbWUiOjE2MDQxMzU2OTQsImlkcCI6ImxvY2FsIiwidXNlcm5hbWUiOiJiZW5oYXJ2ZXktMTMwNjM4Nzg1NCIsImVtYWlsIjoiYmVuLmhhcnZleUBtYXJrZXRkb2pvLmNvbSIsImN1c3RvbWVySWQiOiIxMDE3MDE0MDIiLCJjb3VudHJ5IjoiQzAiLCJ1c2VyUm9sZSI6IkN1c3RvbWVyU2VuaW9yVXNlciIsInNiX2NvdW50cnkiOiJHQiIsInNjb3BlIjpbImNvbm5lY3RfYXBpIiwidWJvX2FwaV9nYXRld2F5Il0sImFtciI6WyJwd2QiXX0.FWxZ5n8fSMnh477icoZMPGONlYwvSXXWkGggtdWnIQvC_9Jv1NnALCtG99F1Wzf4mpmHC-pPInkDUE4cs-xyVvkc6krXftTtcQ8lEtlxL5lyvM-tm2F1MM8dbCcznaCUujpLFt4TeefWUnOtP2tNPZYcK3kSQOF6SH0LvlVBCG-ogu6AxY2GME7jyhNXMnLBGB-cMV76yQEFTfSyb-FV6Ekt4pqOB_PO4oK9p0sONe6Dr5Su9un764xGVyyTq9JXdfEgOTLs1_wCI3bWehpoIopwBq_rDSaOlyrgbVSKhK95xfXQ2REF_N4U_CLmxy-exam3OupFsBXwoSW_713cpA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Oct 2020 09:14:54 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '5470'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: "{\n  \"correlationId\": \"89f77f70-1b59-11eb-ab4b-06a7a8cd954f\",\n
+        \ \"totalSize\": 83898,\n  \"companies\": [\n    {\n      \"id\": \"GB-0-09007125\",\n
+        \     \"country\": \"GB\",\n      \"regNo\": \"09007125\",\n      \"safeNo\":
+        \"UK09353687\",\n      \"name\": \"MARKETO LTD\",\n      \"address\": {\n
+        \       \"simpleValue\": \"145-157 ST JOHN STREET, LONDON, EC1V 4PW\",\n        \"street\":
+        \"LONDON\",\n        \"postCode\": \"EC1V 4PW\"\n      },\n      \"status\":
+        \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestChange\": \"2015-12-03T10:31:19.000Z\",\n
+        \     \"statusDescription\": \"Company is dissolved\"\n    },\n    {\n      \"id\":
+        \"GB-0-SC210837\",\n      \"country\": \"GB\",\n      \"regNo\": \"SC210837\",\n
+        \     \"safeNo\": \"UK07317534\",\n      \"name\": \"MARKET G31\",\n      \"address\":
+        {\n        \"simpleValue\": \"334 DUKE STREET, DENNISTOWN, GLASGOW, City of
+        Glasgow, G31 1QZ\",\n        \"street\": \"DENNISTOWN\",\n        \"city\":
+        \"GLASGOW\",\n        \"postCode\": \"G31 1QZ\"\n      },\n      \"status\":
+        \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestAccounts\":
+        \"2014-03-31T00:00:00.000000Z\",\n      \"dateOfLatestChange\": \"2020-07-05T00:03:02.000Z\",\n
+        \     \"phoneNumbers\": [\n        \"01415567276\"\n      ],\n      \"activityCode\":
+        \"8042\",\n      \"statusDescription\": \"Converted / Closed\"\n    },\n    {\n
+        \     \"id\": \"GB-0-SL009972\",\n      \"country\": \"GB\",\n      \"regNo\":
+        \"SL009972\",\n      \"safeNo\": \"UK08110039\",\n      \"name\": \"MARKETIM
+        LP\",\n      \"address\": {\n        \"simpleValue\": \"CENTRE OFFICE, 58A
+        BROUGHTON STREET, EDINBURGH, EH1 3SA\",\n        \"street\": \"58A BROUGHTON
+        STREET\",\n        \"city\": \"EDINBURGH\",\n        \"postCode\": \"EH1 3SA\"\n
+        \     },\n      \"status\": \"Active\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestChange\":
+        \"2019-08-20T08:46:42.000Z\",\n      \"statusDescription\": \"Company not
+        required to file accounts\"\n    },\n    {\n      \"id\": \"GB-0-SC505490\",\n
+        \     \"country\": \"GB\",\n      \"regNo\": \"SC505490\",\n      \"safeNo\":
+        \"UK13681016\",\n      \"name\": \"MARK ETL LTD\",\n      \"address\": {\n
+        \       \"simpleValue\": \"57 SINGERS PLACE, FALKIRK, BONNYBRIDGE, Stirling
+        and Falkirk, FK4 1FD\",\n        \"street\": \"FALKIRK\",\n        \"city\":
+        \"BONNYBRIDGE\",\n        \"postCode\": \"FK4 1FD\"\n      },\n      \"status\":
+        \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestChange\": \"2020-07-05T00:03:02.000Z\",\n
+        \     \"activityCode\": \"7260\",\n      \"statusDescription\": \"Company
+        is dissolved\"\n    },\n    {\n      \"id\": \"GB-0-04040459\",\n      \"country\":
+        \"GB\",\n      \"regNo\": \"04040459\",\n      \"safeNo\": \"UK03692165\",\n
+        \     \"name\": \"MARKETB LTD\",\n      \"address\": {\n        \"simpleValue\":
+        \"11 KINNERTON STREET, LONDON, Greater London, SW1X8EA\",\n        \"city\":
+        \"LONDON\",\n        \"postCode\": \"SW1X8EA\"\n      },\n      \"status\":
+        \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestChange\": \"2020-07-05T00:03:02.000Z\",\n
+        \     \"phoneNumbers\": [\n        \n      ],\n      \"statusDescription\":
+        \"Company is dissolved\"\n    },\n    {\n      \"id\": \"GB-0-04792329\",\n
+        \     \"country\": \"GB\",\n      \"regNo\": \"04792329\",\n      \"safeNo\":
+        \"UK04439026\",\n      \"name\": \"MARKETS LTD\",\n      \"address\": {\n
+        \       \"simpleValue\": \"3 ELIZABETH HOUSE ANGLIAN CLOSE, WATFORD, WD24
+        4RA\",\n        \"street\": \"WATFORD\",\n        \"postCode\": \"WD24 4RA\"\n
+        \     },\n      \"status\": \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestAccounts\":
+        \"2015-06-30T00:00:00.000000Z\",\n      \"dateOfLatestChange\": \"2017-03-30T01:56:48.000Z\",\n
+        \     \"activityCode\": \"6711\",\n      \"statusDescription\": \"Company
+        is dissolved\"\n    },\n    {\n      \"id\": \"GB-0-07357629\",\n      \"country\":
+        \"GB\",\n      \"regNo\": \"07357629\",\n      \"safeNo\": \"UK07544364\",\n
+        \     \"name\": \"MARKET-I LTD\",\n      \"address\": {\n        \"simpleValue\":
+        \"9 ST. GEORGES AVENUE, KINGSBURY, LONDON, Greater London, NW9 0JT\",\n        \"street\":
+        \"KINGSBURY\",\n        \"city\": \"LONDON\",\n        \"postCode\": \"NW9
+        0JT\"\n      },\n      \"status\": \"NonActive\",\n      \"type\": \"Ltd\",\n
+        \     \"dateOfLatestChange\": \"2020-07-05T00:03:02.000Z\",\n      \"statusDescription\":
+        \"Company is dissolved\"\n    },\n    {\n      \"id\": \"GB-0-SL023882\",\n
+        \     \"country\": \"GB\",\n      \"regNo\": \"SL023882\",\n      \"safeNo\":
+        \"UK14639837\",\n      \"name\": \"MARKET IN LP\",\n      \"address\": {\n
+        \       \"simpleValue\": \"SUITE 1 4 QUEEN STREET, EDINBURGH, EH2 1JE\",\n
+        \       \"street\": \"EDINBURGH\",\n        \"postCode\": \"EH2 1JE\"\n      },\n
+        \     \"status\": \"Active\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestChange\":
+        \"2019-08-20T10:19:34.000Z\",\n      \"statusDescription\": \"Company not
+        required to file accounts\"\n    },\n    {\n      \"id\": \"GB-0-03810166\",\n
+        \     \"country\": \"GB\",\n      \"regNo\": \"03810166\",\n      \"safeNo\":
+        \"UK03464650\",\n      \"name\": \"@MARKET PLC\",\n      \"address\": {\n
+        \       \"simpleValue\": \"UNIT 5 JUPITER HOUSE, CALLEVA PARK, ALDERMASTON,
+        BERKSHIRE, RG7 8NN\",\n        \"street\": \"CALLEVA PARK, ALDERMASTON\",\n
+        \       \"city\": \"BERKSHIRE\",\n        \"postCode\": \"RG7 8NN\"\n      },\n
+        \     \"status\": \"NonActive\",\n      \"type\": \"Ltd\",\n      \"dateOfLatestAccounts\":
+        \"2009-07-31T00:00:00.000000Z\",\n      \"dateOfLatestChange\": \"2020-01-28T02:39:52.000Z\",\n
+        \     \"activityCode\": \"7499\",\n      \"statusDescription\": \"Company
+        is dissolved\"\n    },\n    {\n      \"id\": \"GB-0-SL033403\",\n      \"country\":
+        \"GB\",\n      \"regNo\": \"SL033403\",\n      \"safeNo\": \"UK17127274\",\n
+        \     \"name\": \"MARKETO LP\",\n      \"address\": {\n        \"simpleValue\":
+        \"9A TINTO PLACE, EDINBURGH, EH6 5GD\",\n        \"street\": \"EDINBURGH\",\n
+        \       \"postCode\": \"EH6 5GD\"\n      },\n      \"status\": \"Active\",\n
+        \     \"type\": \"Ltd\",\n      \"dateOfLatestChange\": \"2020-08-06T01:51:35.000Z\",\n
+        \     \"statusDescription\": \"Company not required to file accounts\"\n    }\n
+        \ ]\n}"
+  recorded_at: Sat, 31 Oct 2020 09:14:54 GMT
+recorded_with: VCR 6.0.0
